@@ -2,6 +2,7 @@ import type { Project } from '../types/project'
 
 export const projects: Project[] = [
   {
+    slug: 'explainable-oring-classification',
     number: '01',
     category: 'COMPUTER VISION / RESEARCH',
     title: 'Explainable image classification',
@@ -9,6 +10,7 @@ export const projects: Project[] = [
     tags: ['Python', 'Deep Learning', 'XAI'],
   },
   {
+    slug: 'knowledge-retrieval-with-ai',
     number: '02',
     category: 'APPLIED AI / NLP',
     title: 'Knowledge retrieval with AI',
@@ -16,6 +18,7 @@ export const projects: Project[] = [
     tags: ['RAG', 'LLMs', 'Python'],
   },
   {
+    slug: 'reliable-data-workflows',
     number: '03',
     category: 'SOFTWARE / DATA',
     title: 'Reliable data workflows',
