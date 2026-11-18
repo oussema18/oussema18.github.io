@@ -25,16 +25,17 @@ export function Hero() {
       <div className="flex flex-col items-start">
         <div className="mb-10 flex items-center gap-3 text-[11px] font-semibold uppercase tracking-[0.22em] text-[#66706c]">
           <span className="h-2 w-2 shrink-0 rounded-full bg-[#4e8b67]" />
-          Building at the intersection of AI and software
+          SOFTWARE ENGINEERING x ARTIFICIAL INTELLIGENCE
         </div>
 
         <h1 id="hero-title" className="text-[clamp(3.4rem,6vw,5rem)] font-semibold leading-[1.02] tracking-[-0.075em]">
-          Making ideas<br />
-          <span className="text-[#3458c6]">intelligent.</span>
+          Beyond what's<br />
+          <span className="text-[#3458c6]">possible.</span>
         </h1>
 
         <p className="mt-9 max-w-[460px] text-lg leading-relaxed text-[#585d59]">
-          I'm Oussama — an AI engineer and software developer turning complex problems into simple, useful experiences.
+          I'm Oussama — a software engineer drawn to challenging problems and creative applications of AI. I believe real innovation isn't just about what 
+          technology can do, but what we imagine doing with it.
         </p>
 
         <a
