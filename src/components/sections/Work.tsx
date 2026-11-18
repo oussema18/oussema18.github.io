@@ -1,5 +1,5 @@
 import { projects } from '../../data/projects'
-import { ProjectCard } from '../ui/ProjectCard'
+import { ProjectCard } from '../projects/ProjectCard'
 
 export function Work() {
   return (
@@ -13,7 +13,7 @@ export function Work() {
       </div>
       <div className="grid gap-4 md:grid-cols-3">
         {projects.map((project) => (
-          <ProjectCard key={project.number} project={project} total={projects.length} />
+          <ProjectCard key={project.slug} project={project} total={projects.length} />
         ))}
       </div>
       <p className="mt-5 text-xs text-[#777c76]">Selected work is described at a high level; no confidential materials are shared.</p>

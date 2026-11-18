@@ -4,9 +4,9 @@ import { ArrowIcon } from '../ui/ArrowIcon'
 type Portrait = 'default' | 'smile' | 'point'
 
 const portraitSources: Record<Portrait, string> = {
-  default: '/images/profile.png',
-  smile: '/images/profile-smile.png',
-  point: '/images/profile-down.png',
+  default: `${import.meta.env.BASE_URL}images/profile.png`,
+  smile: `${import.meta.env.BASE_URL}images/profile-smile.png`,
+  point: `${import.meta.env.BASE_URL}images/profile-down.png`,
 }
 
 export function Hero() {
