@@ -2,37 +2,34 @@ import type { Project } from '../types/project'
 
 export const projects: Project[] = [
   {
+    slug: 'explainable-oring-classification',
     number: '01',
-    slug: 'openclm-integration',
     organization: 'PROSTEP AG',
     category: 'SOFTWARE ENGINEERING',
     title: 'OpenCLM Integration Platform',
     description:
       'Developing Java Spring Boot web applications to exchange engineering project data through APIs and structured import/export workflows.',
     tags: ['Java', 'Spring Boot', 'REST APIs', 'JSP'],
-    featured: false,
   },
   {
+    slug: 'knowledge-retrieval-with-ai',
     number: '02',
-    slug: 'jira-ai-classification',
     organization: 'PROSTEP AG',
     category: 'APPLIED AI / SOFTWARE',
     title: 'AI-Assisted Jira Ticket Classification',
     description:
       'Integrating predictive AI services into Jira workflows to support automatic ticket attribute classification using issue descriptions.',
     tags: ['Java', 'Jira SDK', 'Machine Learning', 'APIs'],
-    featured: false,
   },
   {
+    slug: 'reliable-data-workflows',
     number: '03',
-    slug: 'project-canvas',
     organization: 'MaibornWolff / TU Darmstadt',
     category: 'FULL-STACK DEVELOPMENT',
     title: 'Project Canvas',
     description:
       'Building a cross-platform desktop application that extends Jira with interactive backlog visualization and agile project management features.',
     tags: ['React', 'TypeScript', 'Electron', 'Jira API'],
-    featured: true,
   },
   {
     number: '04',
@@ -43,7 +40,6 @@ export const projects: Project[] = [
     description:
       'Investigating how neural code understanding models rely on comments, function names, and identifiers when generating code summaries.',
     tags: ['Python', 'CodeBERT', 'CodeT5', 'NLP'],
-    featured: true,
   },
   {
     number: '05',
@@ -54,7 +50,6 @@ export const projects: Project[] = [
     description:
       'Exploring video manipulation detection through temporal inconsistencies in facial regions and multimodal deep learning techniques.',
     tags: ['Python', 'PyTorch', 'Computer Vision'],
-    featured: false,
   },
   {
     number: '06',
@@ -65,7 +60,6 @@ export const projects: Project[] = [
     description:
       'Exploring temporal abstraction and reusable behaviors in reinforcement learning environments.',
     tags: ['Python', 'Reinforcement Learning', 'Research'],
-    featured: false,
   },
   {
     number: '07',
@@ -76,7 +70,6 @@ export const projects: Project[] = [
     description:
       'Investigating frame-level anomaly detection in cataract surgery videos using computer vision techniques.',
     tags: ['Python', 'Computer Vision', 'Anomaly Detection'],
-    featured: false,
   },
   {
     number: '08',
@@ -87,7 +80,6 @@ export const projects: Project[] = [
     description:
       'Developing an explainable deep learning approach for image-based damage classification of industrial O-rings.',
     tags: ['Python', 'Deep Learning', 'XAI', 'Computer Vision'],
-    featured: true,
   },
   {
     number: '09',
@@ -98,7 +90,6 @@ export const projects: Project[] = [
     description:
       'Converting natural-language data quality requirements into controlled Python validation logic and integrating the results into data quality workflows.',
     tags: ['Python', 'Generative AI', 'Data Engineering'],
-    featured: true,
   },
   {
     number: '10',
@@ -109,7 +100,6 @@ export const projects: Project[] = [
     description:
       'Developing an AI-assisted approach to navigating and analyzing complaint-related information across interconnected data.',
     tags: ['LLMs', 'AI Agents', 'Data Analytics'],
-    featured: true,
   },
   {
     number: '11',
@@ -120,7 +110,6 @@ export const projects: Project[] = [
     description:
       'Exploring an AI-agent application for interacting with information through natural language.',
     tags: ['AI Agents', 'LLMs'],
-    featured: false,
   },
   {
     number: '12',
@@ -131,6 +120,5 @@ export const projects: Project[] = [
     description:
       'A project focused on practical software and AI applications, with implementation details to be documented.',
     tags: ['Software Engineering', 'Applied AI'],
-    featured: false,
   },
 ]

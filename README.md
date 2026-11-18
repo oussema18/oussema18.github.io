@@ -24,8 +24,8 @@ npm.cmd run build
 
 ## Make it yours
 
-- Update the text, selected work, and skill labels in `src/App.tsx`.
-- Adjust colors and layout using Tailwind classes in `src/App.tsx`.
+- Update home sections in `src/components/sections/` and skill labels in `src/data/skills.ts`.
+- Edit project cards in `src/data/projects.ts` and their detail content and optional public evidence links in `src/data/projectDetails.ts`. Each slug becomes a `/projects/<slug>` URL. The production build generates a GitHub Pages entry point for each project.
 - Update the site title and description in `index.html`.
 - Replace the GitHub profile URL if your username changes.
 - The project descriptions are intentionally high-level; review them before publishing.
