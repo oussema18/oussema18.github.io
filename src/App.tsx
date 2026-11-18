@@ -1,3 +1,5 @@
+import { useState } from 'react'
+
 const projects = [
   {
     number: '01',
@@ -38,6 +40,9 @@ function ArrowIcon({ diagonal = false }: { diagonal?: boolean }) {
 }
 
 function App() {
+  const [isPortraitHovered, setIsPortraitHovered] = useState(false)
+  const [isExploreHovered, setIsExploreHovered] = useState(false)
+
   return (
     <div className="min-h-screen bg-[#f7f7f2] text-[#171717] antialiased">
       <div className="mx-auto max-w-[1160px] px-6 sm:px-10 lg:px-14">
@@ -79,8 +84,12 @@ function App() {
                 turning complex problems into simple, useful experiences.
               </p>
 
-              <a
+             <a
                 href="#work"
+                onMouseEnter={() => setIsExploreHovered(true)}
+                onMouseLeave={() => setIsExploreHovered(false)}
+                onFocus={() => setIsExploreHovered(true)}
+                onBlur={() => setIsExploreHovered(false)}
                 className="mt-9 inline-flex items-center gap-3 rounded-full bg-[#171717] px-6 py-3.5 text-sm font-semibold text-white transition-transform hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#3458c6]"
               >
                 Explore my work <ArrowIcon />
@@ -88,12 +97,16 @@ function App() {
             </div>
 
             {/* RIGHT COLUMN */}
-            <div className="group relative w-full max-w-[400px] overflow-hidden rounded-[2rem] bg-[#e9e9e3]">
+            <div
+              className="relative w-full max-w-[400px] overflow-hidden rounded-[2rem] bg-[#e9e9e3]"
+              onMouseEnter={() => setIsPortraitHovered(true)}
+              onMouseLeave={() => setIsPortraitHovered(false)}
+            >
               {/* Default portrait */}
               <img
                 src="/images/profile.png"
                 alt="Portrait of Oussama Masmoudi"
-                className="h-[360px] w-full object-cover object-top transition-opacity duration-500 sm:h-[420px] lg:h-[460px]"
+                className="h-[360px] w-full object-cover object-top sm:h-[420px] lg:h-[460px]"
               />
 
               {/* Smiling portrait */}
@@ -101,7 +114,21 @@ function App() {
                 src="/images/profile-smile.png"
                 alt=""
                 aria-hidden="true"
-                className="absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+                className={`pointer-events-none absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-300 ${
+                  isPortraitHovered && !isExploreHovered
+                    ? 'opacity-100'
+                    : 'opacity-0'
+                }`}
+              />
+
+              {/* Pointing-down portrait */}
+              <img
+                src="/images/profile-down.png"
+                alt=""
+                aria-hidden="true"
+                className={`pointer-events-none absolute inset-0 h-full w-full object-cover object-top transition-opacity duration-300 ${
+                  isExploreHovered ? 'opacity-100' : 'opacity-0'
+                }`}
               />
             </div>
           </section>
