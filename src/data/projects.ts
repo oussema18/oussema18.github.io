@@ -2,7 +2,7 @@ import type { Project } from '../types/project'
 
 export const projects: Project[] = [
   {
-    slug: 'explainable-oring-classification',
+    slug: 'openclm-integration',
     number: '01',
     organization: 'PROSTEP AG',
     category: 'SOFTWARE ENGINEERING',
@@ -12,7 +12,7 @@ export const projects: Project[] = [
     tags: ['Java', 'Spring Boot', 'REST APIs', 'JSP'],
   },
   {
-    slug: 'knowledge-retrieval-with-ai',
+    slug: 'jira-ai-classification',
     number: '02',
     organization: 'PROSTEP AG',
     category: 'APPLIED AI / SOFTWARE',
@@ -22,7 +22,7 @@ export const projects: Project[] = [
     tags: ['Java', 'Jira SDK', 'Machine Learning', 'APIs'],
   },
   {
-    slug: 'reliable-data-workflows',
+    slug: 'project-canvas',
     number: '03',
     organization: 'MaibornWolff / TU Darmstadt',
     category: 'FULL-STACK DEVELOPMENT',

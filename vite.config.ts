@@ -9,6 +9,13 @@ function githubPagesRoutes(): Plugin {
   return {
     name: 'github-pages-routes',
     apply: 'build',
+    buildStart() {
+      const slugs = new Set<string>()
+      for (const { slug } of projects) {
+        if (slugs.has(slug)) this.error(`Duplicate project slug: "${slug}"`)
+        slugs.add(slug)
+      }
+    },
     async writeBundle({ dir }) {
       if (!dir) return
 
