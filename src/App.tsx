@@ -88,14 +88,21 @@ function App() {
             </div>
 
             {/* RIGHT COLUMN */}
-            <div className="flex items-center justify-center lg:justify-end">
-              <div className="relative w-full max-w-[420px] overflow-hidden rounded-[2rem] bg-[#e9e9e3]">
-                <img
-                  src="/images/profile.png"
-                  alt="Portrait of Oussama Masmoudi"
-                  className="aspect-[4/5] w-full object-cover"
-                />
-              </div>
+            <div className="group relative w-full max-w-[400px] overflow-hidden rounded-[2rem] bg-[#e9e9e3]">
+              {/* Default portrait */}
+              <img
+                src="/images/profile.png"
+                alt="Portrait of Oussama Masmoudi"
+                className="h-[360px] w-full object-cover object-top transition-opacity duration-500 sm:h-[420px] lg:h-[460px]"
+              />
+
+              {/* Smiling portrait */}
+              <img
+                src="/images/profile-smile.png"
+                alt=""
+                aria-hidden="true"
+                className="absolute inset-0 h-full w-full object-cover object-top opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+              />
             </div>
           </section>
 
