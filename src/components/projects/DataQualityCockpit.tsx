@@ -1,5 +1,6 @@
 import { useState, type ReactNode } from 'react'
 import { BatchPipeline } from './BatchPipeline'
+import { AgentChat } from './AgentChat'
 
 type Contribution = {
   title: string
@@ -39,7 +40,13 @@ const contributions: Contribution[] = [
   {
     title: 'DQC AI Agent',
     summary: 'Built an agent that retrieves the data quality rules and their results.',
-    points: ['Summarizes rule results so data quality problems are easy to spot.'],
+    points: [
+      'Answers questions in natural language, such as which data quality issues are the most critical right now.',
+      'Summarizes rule scores across the different ERP systems, so users see at a glance where quality is weakest.',
+      'Helps users identify data quality problems without browsing every rule and dashboard.',
+      'Suggests how to prioritize the most relevant issues, with a recommended next action for each.',
+    ],
+    illustration: <AgentChat />,
   },
 ]
 
