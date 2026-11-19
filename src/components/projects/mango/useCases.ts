@@ -1,33 +1,11 @@
 // Illustrative scenarios for the ManGo AI Agent. All document IDs, titles and
 // records below are fictional examples; no real company data is shown.
 
+import type { DemoCase } from '../agent/types'
+
 export type Route = 'sql' | 'rag'
 
-export type Tone = 'red' | 'amber' | 'green' | 'neutral'
-
-export type Trace =
-  | { kind: 'sql'; code: string }
-  | { kind: 'chunks'; chunks: { ref: string; text: string; score: number }[] }
-
-export type AnswerItem = {
-  title: string
-  meta?: string
-  badge?: { text: string; tone: Tone }
-  cite?: number[]
-}
-
-export type UseCase = {
-  id: string
-  tab: string
-  route: Route
-  question: string
-  tools: string[]
-  trace: Trace
-  intro: string
-  layout: 'rows' | 'steps' | 'timeline'
-  answer: AnswerItem[]
-  sources: string[]
-}
+export type UseCase = DemoCase<Route>
 
 export const useCases: UseCase[] = [
   {

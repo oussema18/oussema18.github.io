@@ -2,7 +2,8 @@ import type { ReactNode } from 'react'
 import { DataFoundation } from './DataFoundation'
 import { Evaluation } from './Evaluation'
 import { ManGoArchitecture } from './ManGoArchitecture'
-import { LockIcon, ManGoChat } from './ManGoChat'
+import { LockIcon } from '../agent/AgentDemoChat'
+import { ManGoChat } from './ManGoChat'
 
 const challenges: string[] = [
   'Information about controlled quality documents was spread across the document contents and separate administrative records: metadata, workflows, audit trails and copy logs.',

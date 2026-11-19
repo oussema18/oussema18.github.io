@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { FADE_UP, useCycle, usePrefersReducedMotion } from './hooks'
+import { FADE_UP, useCycle, usePrefersReducedMotion } from '../agent/hooks'
 import { useCases, type Route } from './useCases'
 
 const lanes: { route: Route; title: string; tool: string; sources: string[] }[] = [

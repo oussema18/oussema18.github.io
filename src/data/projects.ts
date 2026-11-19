@@ -96,10 +96,10 @@ export const projects: Project[] = [
     slug: 'complaints-ai-agent',
     organization: 'Merck',
     category: 'AGENTIC AI / ANALYTICS',
-    title: 'Complaints Analysis AI Agent',
+    title: 'Complaints AI Agent',
     description:
-      'Developing an AI-assisted approach to navigating and analyzing complaint-related information across interconnected data.',
-    tags: ['LLMs', 'AI Agents', 'Data Analytics'],
+      'A conversational AI agent in Palantir Foundry/AIP that supports quality complaint investigations by connecting complaints with their CAPAs, change controls and related records.',
+    tags: ['Palantir Foundry', 'AIP', 'Data Modeling', 'Retrieval Evaluation'],
   },
   {
     number: '02',

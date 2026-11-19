@@ -1,4 +1,4 @@
-import { useCycle, usePrefersReducedMotion } from './hooks'
+import { useCycle, usePrefersReducedMotion } from '../agent/hooks'
 
 type Check = 'route' | 'source' | 'facts' | 'cited'
 

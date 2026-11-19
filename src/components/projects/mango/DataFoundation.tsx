@@ -1,4 +1,4 @@
-import { FADE_UP, useCycle, usePrefersReducedMotion } from './hooks'
+import { FADE_UP, useCycle, usePrefersReducedMotion } from '../agent/hooks'
 
 const sources = [
   { name: 'Document metadata', kind: 'SQL', fields: ['doc_id', 'title', 'owner', 'status', 'next_review_date'], example: 'Effective · next review in 9 days' },

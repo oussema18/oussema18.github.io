@@ -1,5 +1,6 @@
 import type { ComponentType } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { ComplaintsAgent } from '../components/projects/complaints/ComplaintsAgent'
 import { DataQualityCockpit } from '../components/projects/DataQualityCockpit'
 import { ManGoAgent } from '../components/projects/mango/ManGoAgent'
 import { ProjectEvidence } from '../components/projects/ProjectEvidence'
@@ -10,6 +11,7 @@ import { projects } from '../data/projects'
 const projectIllustrations: Partial<Record<string, ComponentType>> = {
   'data-quality-cockpit': DataQualityCockpit,
   'mango-ai-agent': ManGoAgent,
+  'complaints-ai-agent': ComplaintsAgent,
 }
 
 const projectHeaderVisuals: Partial<Record<string, ComponentType>> = {
