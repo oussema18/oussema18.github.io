@@ -1,6 +1,8 @@
 import { projects } from '../../data/projects'
 import { ProjectCard } from '../projects/ProjectCard'
 
+const sortedProjects = [...projects].sort((a, b) => Number(a.number) - Number(b.number))
+
 export function Work() {
   return (
     <section id="work" aria-labelledby="work-title" className="scroll-mt-24 border-b border-[#deded8] py-24 md:py-28">
@@ -12,7 +14,7 @@ export function Work() {
         <p className="max-w-[290px] text-sm leading-relaxed text-[#777c76]">A few areas where software engineering meets applied intelligence.</p>
       </div>
       <div className="grid gap-4 md:grid-cols-3">
-        {projects.map((project) => (
+        {sortedProjects.map((project) => (
           <ProjectCard key={project.slug} project={project} total={projects.length} />
         ))}
       </div>
