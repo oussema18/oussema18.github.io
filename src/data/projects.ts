@@ -103,13 +103,13 @@ export const projects: Project[] = [
   },
   {
     number: '02',
-    slug: 'mongo-ai-agent',
+    slug: 'mango-ai-agent',
     organization: 'Merck',
-    category: 'APPLIED AI',
-    title: 'Mongo AI Agent',
+    category: 'AGENTIC AI / RAG',
+    title: 'ManGo AI Agent',
     description:
-      'Exploring an AI-agent application for interacting with information through natural language.',
-    tags: ['AI Agents', 'LLMs'],
+      'A conversational AI agent in Palantir Foundry/AIP that helps employees find and understand controlled quality documents, combining SQL queries over document records with RAG over document contents.',
+    tags: ['Palantir Foundry', 'AIP', 'RAG', 'SQL', 'Tool Calling'],
   },
   {
     number: '12',

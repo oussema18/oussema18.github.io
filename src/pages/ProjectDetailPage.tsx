@@ -1,6 +1,7 @@
 import type { ComponentType } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { DataQualityCockpit } from '../components/projects/DataQualityCockpit'
+import { ManGoAgent } from '../components/projects/mango/ManGoAgent'
 import { ProjectEvidence } from '../components/projects/ProjectEvidence'
 import { ScoreDonut } from '../components/projects/ScoreDonut'
 import { projectDetails } from '../data/projectDetails'
@@ -8,6 +9,7 @@ import { projects } from '../data/projects'
 
 const projectIllustrations: Partial<Record<string, ComponentType>> = {
   'data-quality-cockpit': DataQualityCockpit,
+  'mango-ai-agent': ManGoAgent,
 }
 
 const projectHeaderVisuals: Partial<Record<string, ComponentType>> = {

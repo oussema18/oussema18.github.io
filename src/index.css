@@ -10,5 +10,9 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  [class*="animate-[dqc-"] { animation: none !important; }
+  [class*="animate-[dqc-"], [class*="animate-[mango-"] { animation: none !important; }
+}
+
+@keyframes mango-dash {
+  to { stroke-dashoffset: -14; }
 }
