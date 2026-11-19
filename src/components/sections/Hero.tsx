@@ -34,7 +34,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-9 max-w-[460px] text-lg leading-relaxed text-[#585d59]">
-          I'm Oussama — a software engineer drawn to challenging problems and creative applications of AI. I believe real innovation isn't just about what 
+          I'm Oussama — an AI engineer drawn to challenging problems and creative applications of AI. I believe real innovation isn't just about what 
           technology can do, but what we imagine doing with it.
         </p>
 
