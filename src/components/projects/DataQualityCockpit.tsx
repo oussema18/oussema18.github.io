@@ -17,7 +17,7 @@ const contributions: Contribution[] = [
       'Validators check that the generated code compiles before it is accepted.',
       'Field validation makes sure the code only references FIELDs that exist in the target dataset.',
     ],
-    videoSrc: 'public/images/data-quality-rule-to-pyspark-loop.mp4',
+    videoSrc: 'images/data-quality-rule-to-pyspark-loop.mp4',
     videoLabel: 'Example of a rule description being translated into validated Python code',
   },
   {
