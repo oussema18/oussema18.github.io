@@ -1,1 +1,14 @@
 @import "tailwindcss";
+@keyframes dqc-fade-up {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes dqc-grow {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  [class*="animate-[dqc-"] { animation: none !important; }
+}
