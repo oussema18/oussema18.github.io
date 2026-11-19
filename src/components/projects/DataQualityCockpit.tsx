@@ -17,7 +17,7 @@ const contributions: Contribution[] = [
       'Validators check that the generated code compiles before it is accepted.',
       'Field validation makes sure the code only references FIELDs that exist in the target dataset.',
     ],
-    videoSrc: 'images/dqc-rule-to-code.mp4',
+    videoSrc: 'public/images/data-quality-rule-to-pyspark-loop.mp4',
     videoLabel: 'Example of a rule description being translated into validated Python code',
   },
   {
@@ -51,6 +51,8 @@ function ContributionVideo({ src, label }: { src: string; label: string }) {
       className="block h-auto w-full"
       src={`${import.meta.env.BASE_URL}${src}`}
       controls
+      loop
+      autoPlay
       muted
       playsInline
       preload="metadata"

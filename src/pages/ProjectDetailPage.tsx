@@ -2,11 +2,16 @@ import type { ComponentType } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { DataQualityCockpit } from '../components/projects/DataQualityCockpit'
 import { ProjectEvidence } from '../components/projects/ProjectEvidence'
+import { ScoreDonut } from '../components/projects/ScoreDonut'
 import { projectDetails } from '../data/projectDetails'
 import { projects } from '../data/projects'
 
 const projectIllustrations: Partial<Record<string, ComponentType>> = {
   'data-quality-cockpit': DataQualityCockpit,
+}
+
+const projectHeaderVisuals: Partial<Record<string, ComponentType>> = {
+  'data-quality-cockpit': () => <ScoreDonut score={88.70} />,
 }
 
 function BackToWork() {
@@ -34,18 +39,26 @@ export function ProjectDetailPage() {
 
   const details = projectDetails[project.slug]
   const Illustration = projectIllustrations[project.slug]
+  const HeaderVisual = projectHeaderVisuals[project.slug]
 
   return (
     <article id="top" className="max-w-3xl py-16 md:py-24">
       <BackToWork />
-      <p className="mb-3 mt-10 text-xs font-semibold tracking-[0.14em] text-[#3458c6]">{project.category}</p>
-      <h1 className="text-4xl font-semibold leading-tight tracking-[-0.055em] md:text-6xl">{project.title}</h1>
-      <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#585d59]">{project.description}</p>
-      <ul aria-label="Topics" className="mt-6 flex flex-wrap gap-2">
-        {project.tags.map((tag) => (
-          <li key={tag} className="rounded-full border border-[#e1e3db] px-3 py-1 text-xs text-[#666b65]">{tag}</li>
-        ))}
-      </ul>
+      <header className="relative">
+        <p className="mb-3 mt-10 text-xs font-semibold tracking-[0.14em] text-[#3458c6]">{project.category}</p>
+        <h1 className="text-4xl font-semibold leading-tight tracking-[-0.055em] md:text-6xl">{project.title}</h1>
+        <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#585d59]">{project.description}</p>
+        <ul aria-label="Topics" className="mt-6 flex flex-wrap gap-2">
+          {project.tags.map((tag) => (
+            <li key={tag} className="rounded-full border border-[#e1e3db] px-3 py-1 text-xs text-[#666b65]">{tag}</li>
+          ))}
+        </ul>
+        {HeaderVisual && (
+          <div className="mt-10 flex justify-center xl:absolute xl:left-[calc(100%+2.5rem)] xl:top-1/2 xl:mt-0 xl:-translate-y-1/2">
+            <HeaderVisual />
+          </div>
+        )}
+      </header>
       {Illustration && <Illustration />}
       {details && (
         <section aria-labelledby="project-focus" className="mt-10 border-t border-[#deded8] pt-8">
