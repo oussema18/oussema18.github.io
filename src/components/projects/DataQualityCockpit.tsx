@@ -1,9 +1,12 @@
-import { useState } from 'react'
+import { useState, type ReactNode } from 'react'
+import { BatchPipeline } from './BatchPipeline'
 
 type Contribution = {
   title: string
   summary: string
+  challenge?: string
   points: string[]
+  illustration?: ReactNode
   videoSrc?: string
   videoLabel?: string
 }
@@ -23,10 +26,15 @@ const contributions: Contribution[] = [
   {
     title: 'Code Repository Transformations',
     summary: 'Loaded all input datasets and computed rule scores efficiently at scale.',
+    challenge:
+      'The rules depend on many different input datasets. Loading and joining all of them at once to evaluate every rule exceeded the available memory profile and made runtimes long.',
     points: [
-      'Batched rules to stay within memory constraints.',
-      'Combined the per-batch results into one consolidated score output.',
+      'Grouped the rules into batches based on the input datasets they need, so each batch loads only its own datasets.',
+      'Processed the batches one after another, freeing memory before the next batch starts.',
+      'Joined the partial results of all batches into one consolidated score output.',
+      'This kept memory usage within limits and reduced the overall runtime.',
     ],
+    illustration: <BatchPipeline />,
   },
   {
     title: 'DQC AI Agent',
@@ -219,6 +227,12 @@ export function DataQualityCockpit() {
                     {item.title}
                   </h3>
                   <p className="mt-1 text-sm leading-relaxed text-[#6b706c]">{item.summary}</p>
+                  {item.challenge && (
+                    <p className="mt-3 rounded-lg border-l-2 border-[#c85d50] bg-white/60 px-3 py-2 text-sm leading-relaxed text-[#6b706c]">
+                      <span className="font-semibold text-[#585d59]">Challenge: </span>
+                      {item.challenge}
+                    </p>
+                  )}
                   <ul className="mt-3 space-y-1.5">
                     {item.points.map((point) => (
                       <li key={point} className="flex gap-2 text-sm leading-relaxed text-[#6b706c]">
@@ -227,6 +241,11 @@ export function DataQualityCockpit() {
                       </li>
                     ))}
                   </ul>
+                  {item.illustration && (
+                    <figure className="mt-4 overflow-hidden rounded-xl border border-[#deded8] bg-white">
+                      {item.illustration}
+                    </figure>
+                  )}
                   {item.videoSrc && (
                     <figure className="mt-4 overflow-hidden rounded-xl border border-[#deded8] bg-white">
                       <ContributionVideo src={item.videoSrc} label={item.videoLabel ?? item.title} />
