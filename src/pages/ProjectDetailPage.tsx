@@ -1,7 +1,13 @@
+import type { ComponentType } from 'react'
 import { Link, useParams } from 'react-router-dom'
+import { DataQualityCockpit } from '../components/projects/DataQualityCockpit'
 import { ProjectEvidence } from '../components/projects/ProjectEvidence'
 import { projectDetails } from '../data/projectDetails'
 import { projects } from '../data/projects'
+
+const projectIllustrations: Partial<Record<string, ComponentType>> = {
+  'data-quality-cockpit': DataQualityCockpit,
+}
 
 function BackToWork() {
   return (
@@ -27,6 +33,7 @@ export function ProjectDetailPage() {
   if (!project) return <PageNotFound />
 
   const details = projectDetails[project.slug]
+  const Illustration = projectIllustrations[project.slug]
 
   return (
     <article id="top" className="max-w-3xl py-16 md:py-24">
@@ -39,6 +46,7 @@ export function ProjectDetailPage() {
           <li key={tag} className="rounded-full border border-[#e1e3db] px-3 py-1 text-xs text-[#666b65]">{tag}</li>
         ))}
       </ul>
+      {Illustration && <Illustration />}
       {details && (
         <section aria-labelledby="project-focus" className="mt-10 border-t border-[#deded8] pt-8">
           <h2 id="project-focus" className="text-xl font-semibold tracking-tight">Project focus</h2>
