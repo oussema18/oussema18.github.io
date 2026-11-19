@@ -50,7 +50,6 @@ function ContributionVideo({ src, label }: { src: string; label: string }) {
     <video
       className="block h-auto w-full"
       src={`${import.meta.env.BASE_URL}${src}`}
-      controls
       loop
       autoPlay
       muted
