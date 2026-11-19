@@ -3,7 +3,7 @@ import type { Project } from '../types/project'
 export const projects: Project[] = [
   {
     slug: 'openclm-integration',
-    number: '01',
+    number: '10',
     organization: 'PROSTEP AG',
     category: 'SOFTWARE ENGINEERING',
     title: 'OpenCLM Integration Platform',
@@ -13,7 +13,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'jira-ai-classification',
-    number: '02',
+    number: '09',
     organization: 'PROSTEP AG',
     category: 'APPLIED AI / SOFTWARE',
     title: 'AI-Assisted Jira Ticket Classification',
@@ -23,7 +23,7 @@ export const projects: Project[] = [
   },
   {
     slug: 'project-canvas',
-    number: '03',
+    number: '04',
     organization: 'MaibornWolff / TU Darmstadt',
     category: 'FULL-STACK DEVELOPMENT',
     title: 'Project Canvas',
@@ -32,7 +32,7 @@ export const projects: Project[] = [
     tags: ['React', 'TypeScript', 'Electron', 'Jira API'],
   },
   {
-    number: '04',
+    number: '11',
     slug: 'shortcut-learning-code',
     organization: 'TU Darmstadt',
     category: 'NLP / RESEARCH',
@@ -82,7 +82,7 @@ export const projects: Project[] = [
     tags: ['Python', 'Deep Learning', 'XAI', 'Computer Vision'],
   },
   {
-    number: '09',
+    number: '01',
     slug: 'data-quality-cockpit',
     organization: 'Merck',
     category: 'GENERATIVE AI / DATA ENGINEERING',
@@ -92,7 +92,7 @@ export const projects: Project[] = [
     tags: ['Python', 'Generative AI', 'Data Engineering'],
   },
   {
-    number: '10',
+    number: '03',
     slug: 'complaints-ai-agent',
     organization: 'Merck',
     category: 'AGENTIC AI / ANALYTICS',
@@ -102,7 +102,7 @@ export const projects: Project[] = [
     tags: ['LLMs', 'AI Agents', 'Data Analytics'],
   },
   {
-    number: '11',
+    number: '02',
     slug: 'mongo-ai-agent',
     organization: 'Merck',
     category: 'APPLIED AI',
